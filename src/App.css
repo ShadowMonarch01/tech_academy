@@ -16,13 +16,20 @@
   min-height: 90vh;
 }
 
+.web{
+  display: flex;
+}
+.mobile{
+  display: none;
+}
+
 .first-section{
   height: 100vh;
   background-image: url('./assets/cwbg1.png');
   background-repeat: no-repeat;
   background-size: cover;
   padding-left: 38px;
-  padding-top: 16vh;
+  padding-top: 20vh;
 }
 
 .first-txt{
@@ -244,7 +251,8 @@
 .card-image{
   align-self: center;
   margin-top: 20px;
-  background-color: #B7B7B7;
+  background-color: #202020;
+  /* background-color: #B7B7B7; */
   width: 100%;
   height: 56%;
 }
@@ -323,51 +331,145 @@
 .fourth-section{
   /* background-color: gray; */
   background-color: black;
-  height: 100vh;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 100px;
 }
 
-.content-box{
-  margin-top: 60px;
-  /* background-color: coral; */
-  width: 80%;
-  height: 310px;
+.fifth-section{
+  height: fit-content;
+  background-color: black;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  /* padding: 0px 20px; */
+  flex-direction: column;
+  padding: 0px 40px 100px 40px;
+  gap: 50px;
 }
 
-.content-b1, .content-b2{
-  height: 100%;
-  width: 45%;
-  /* background-color:steelblue; */
-}
-
-.content-b1{
-  background: #212121;
-}
-
-.content-bgtxt{
+.fifth-bg-txt{
   color: #FFF;
   font-family: Montserrat;
-  font-size: 32px;
+  font-size: 48px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  border-left: 5px  solid #5A189A;
-  padding: 8px 0px 8px 6px;
-  width: fit-content;
 }
 
-.content-smtxt{
+.all-courses-btn-container{
+  /* background-color: aqua; */
+  margin-top: 80px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.all-courses-btn-container .btn{
+  display: flex;
+  width: 428px;
+  height: 60px;
+  padding: 8px 44px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 8px;
+  border-width: 0px;
+  background: #5A189A;
   color: #FFF;
-  font-family: Montserrat;
-  font-size: 22px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  margin-top: 10px;
+  font-size: 26px;
+}
+
+/* Responsive 1022px */
+@media screen and (max-width: 1022px){
+  .web{
+    display: none;
+  }
+  .mobile{
+    display: flex;
+  }
+
+  .first-section{
+    display: flex;
+    flex-direction: column;
+    /* text-align: center; */
+    align-items: center;
+    height: 80vh;
+  }
+
+  .first-txt{
+    font-size: 38px;
+    text-align: center;
+    gap: 8px;
+  }
+
+  .first-snd-txt{
+    font-size: 18px;
+  }
+
+  .first-scn-btn{
+    margin-top: 60px;
+    width: 320px;
+    height: 40px;
+  }
+
+  .first-scnbtn-txt{
+    font-size: 18px;
+  }
+
+  .second-section{
+    height: fit-content;
+  }
+  .sc2-bgtxt{
+    font-size: 34px;
+  }
+
+  .lbx-fir-txt{
+    font-size: 24px;
+    text-align: center;
+    /* background-color: aqua; */
+    width: 100%;
+  }
+
+  .main-container{
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    width: 90%;
+  }
+
+  .left-box, .right-box{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+  }
+
+  .second-scn-btn{
+    width: 340px;
+    height: 50px;
+  }
+
+  .right-arrow-2{
+    height: 50px;
+  }
+
+  .third-section{
+    height: fit-content;
+  }
+
+  .third-bgtxt{
+    font-size: 36px;
+  }
+
+  .third-smtxt{
+    font-size: 24px;
+  }
+
+  .all-courses-btn-container .btn{
+    width: 340px;
+    height: 50px;
+  }
+  
+  
 }

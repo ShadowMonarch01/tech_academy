@@ -1,4 +1,5 @@
 .nav-bar-container{
+    position: fixed;
     height: 70px;
     width: 100%;
     /* background-color: black; */
@@ -9,6 +10,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 0px 40px;
+    z-index: 20;
 }
 
 .bar-logo{
@@ -31,4 +33,55 @@
     font-family: Inter;
     color: white;
     font-size: 24px;
+}
+
+.mobile-menu-icon{
+    display: none;
+}
+
+@media screen and (max-width: 1022px){
+
+    .nav-menu{
+        /* display: none; */
+        overflow: hidden;
+        max-height: 0;
+        opacity: 0;
+        transition: max-height 0.9s ease;
+    }
+
+    .nav-links2-mobile{
+        position: absolute;
+        display: block;
+        list-style: none;
+        background-color: #5A189A;
+        left: 0;
+        top: 70px;
+        transition: all 0.5s ease-out;
+        width: 100%;
+        max-height: 200px;
+        cursor: pointer;
+        transition: max-height 0.3s, opacity 1s, visibility 1.5s ease;
+    }
+
+    .nav-links2-mobile a{
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        margin: 20px 0px;
+        padding: 20px 0px;
+        cursor: pointer;
+    }
+
+    .mobile-menu-icon{
+        display: block;
+        position: absolute;
+        font-size: 30px;
+        color: white;
+        /* background-color: #5A189A; */
+        background-color: transparent;
+        border: none;
+        outline: none;
+        top: 15px;
+        right: 25px;
+    }
 }

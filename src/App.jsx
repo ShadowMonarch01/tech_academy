@@ -12,6 +12,9 @@ import bgImg2 from './assets/bgimg2.png'
 import googleLogo from './assets/googlelogo.png'
 import { comboData } from './data'
 
+import Details from './detailsContent/Details'
+import Card from './Crd/Card'
+
 function App() {
 
   const menu = comboData.map((item,index)=>{
@@ -54,16 +57,16 @@ function App() {
     <>
       <div className='app-container'>
         <NavBar/>
-        <section className='first-section'>
+        <section id='fs' className='first-section'>
           
           <p className='first-txt'>
-            Surf the<br/>
-            <span className='color-txt1'>tech wave</span> with us!
+            Surf the <br className='web'/>
+            <span className='color-txt1'>tech wave</span> <br className='mobile'/> with us!
           </p>
 
           <p className='first-snd-txt'>
-            Whether you're a software development enthusiast, interested<br/> 
-            in learning data science, or eager to dive into the world of<br/> 
+            Whether you're a software development enthusiast, interested<br className='web'/> 
+            in learning data science, or eager to dive into the world of<br className='web'/> 
             interface design.
           </p>
 
@@ -109,7 +112,7 @@ function App() {
 
           <p className='third-bgtxt'>See examples of some <span className='color-txt1'>courses</span></p>
 
-          <p className='third-smtxt'>Advanced teaching methods with awards<br/> 
+          <p className='third-smtxt'>Advanced teaching methods with awards<br className='web'/> 
             according to the development at the end of the course</p>
 
             {/* <ScrollMenu
@@ -117,40 +120,50 @@ function App() {
               arrowLeft={ArrowLeft}
               arrowRight={ArrowRight}
             /> */}
-
-          <div className='course-card'>
-            <div className='card-tag'>
-              <p>Programming</p>
-            </div>
-
-            {/* <div className='card-image'></div> */}
-            <img className='card-image' src={''}/>
-
-            <p className='card-name'>React Native</p>
-
-            <div className='card-btm-section'>
-              <div className='card-price'>
-                <p className='cross'>$3000</p>
-
-                <p className='normal-price'>$1500</p>
-              </div>
-
-              <img className='gg-logo' src={googleLogo} alt=''/>
-            </div>
-          </div>
+          <Card/>
         </section>
 
-        <section className='fourth-section'>
+        <section id='aboutus' className='fourth-section'>
           <p className='sc2-bgtxt'>Why take courses on <span className='color-txt1'>CodeWave</span>?</p>
 
-          <div className='content-box'>
-            <div className='content-b1'></div>
-            <div className='content-b2'>
-              <p className='content-bgtxt'>CodeWave</p>
-              <p className='content-smtxt'>Our courses and formation programs are created with specialists from the best innovative companies in the world, 
-                applying a methodology so you can rule the technologies used in the job market and also include the newest and the current technologies which will impact the future of digital business.</p>
-            </div>
+          <Details
+            rowDirection={'cb-forward'}
+          />
+
+          <Details
+            rowDirection={'cb-reverse'}
+          />
+
+          <Details
+            rowDirection={'cb-forward'}
+          />
+
+          <Details
+            rowDirection={'cb-reverse'}
+          />
+        </section>
+
+        <section id='courses' className='fifth-section'>
+
+          <div>
+            <p className='fifth-bg-txt'>Courses on <span className='color-txt1'>Programming</span></p>
+            <Card/>
           </div>
+
+          <div>
+            <p className='fifth-bg-txt'>Courses on <span className='color-txt1'>UI/UX Design</span></p>
+            <Card/>
+          </div>
+
+          <div>
+            <p className='fifth-bg-txt'>Courses on <span className='color-txt1'>Financial Education</span></p>
+            <Card/>
+          </div>
+
+          <div className='all-courses-btn-container'>
+            <button className='btn'>See All Courses</button>
+          </div>
+
         </section>
       </div>
     </>
